@@ -25,6 +25,7 @@ addGuestButton.addEventListener("click", function () {
     }
 });
 
+// Ability to use the "Enter" key to add names to Guest List
 const input = document.getElementById("invite");
 
 input.addEventListener("keypress", function (e) {

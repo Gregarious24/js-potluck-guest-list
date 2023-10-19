@@ -16,12 +16,13 @@ const assignButton = document.querySelector(".assign");
 const assignedItems = document.querySelector(".assigned-items");
 
 addGuestButton.addEventListener("click", function () {
-    const guest = guestInput.value;
+    const guestClick = guestInput.value;
     // console.log(guest);
-    if (guest !== "") {
-        addToList(guest);
+    if (guestClick !== "") {
+        addToList(guestClick);
         clearInput();
         updateGuestCount();
+        guestInput.focus();
     }
 });
 
@@ -29,11 +30,12 @@ addGuestButton.addEventListener("click", function () {
 const input = document.getElementById("invite");
 
 input.addEventListener("keypress", function (e) {
-    const guest = guestInput.value;
+    const guestEnter = guestInput.value;
     if (e.key === "Enter") {
-        addToList(guest);
+        addToList(guestEnter);
         clearInput();
         updateGuestCount();
+        guestInput.focus();
     }
 });
 
